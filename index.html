@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>online Grade checker</title>
+    <title>online grade checker</title>
 </head>
 
 <body>
@@ -36,8 +36,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3">
-                    <p><marquee behavior="scroll" direction="right">follow</marquee>
-</p>
+                    <p>
+                        <marquee behavior="scroll" direction="right">follow</marquee>
+                    </p>
                 </div>
                 <div class="col-lg-8 col-sm-8 text-center">
                     <ul class="nav justify-content-center">
@@ -64,42 +65,37 @@
         <div class="container py-6">
             <div class="implement-design">
                 <div class="row justify-content-center">
-                <div class="col-lg-6 col-sm-8 text-center">
-                    <form name="result">
-                        <div class="row">
-                            <div class="col-lg">
-                                <input type="text" name="Number" placeholder="Enter your number to check grade" class="form-control">
-                                
-                                <input class="btn-success" type="button" value="Check Grade" onclick="Show()"><br>
-                                <input type="text" name="Grade"  class="form-control" readonly >
-                                <input type="button" class="btn-info" value="Grade Chart" onclick="showImage();"/>
-                                <button class="btn-success" onClick="window.location.reload();">Refresh Page</button>
-    <img id="loadingImage" src="image/grader.jpg" style="visibility:hidden"/>
+                    <div class="col-lg-6 col-sm-8 text-center">
+                        <form name="result">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <input type="text" name="Number" placeholder="Enter your number to check grade" class="form-control">
 
-
-
-
-                                
+                                    <input class="btn-success" type="button" value="Check Grade" onclick="Show()">
+                                    <br>
+                                    <input type="text" name="Grade" class="form-control" readonly>
+                                    <input type="button" class="btn-info" value="Grade Chart" onclick="showImage();" />
+                                    <button class="btn-success" onClick="window.location.reload();">Refresh Page</button>
+                                    <img id="loadingImage" src="image/grader.jpg" style="visibility:hidden" />
 
                                 </div>
                             </div>
-                        </div>
+                    </div>
                     </form>
                 </div>
             </div>
-            </div>
         </div>
     </div>
+    </div>
     <!----calculator design--->
-     <!----calculator-footer design--->
+    <!----calculator-footer design--->
 
-         <div class="footer">
-             <div class="container">
-                 <p>all rights reserved by &copy; Sanjana </p>
-             </div>
-         </div>
-      <!----calculator-footer design--->
-
+    <div class="footer">
+        <div class="container">
+            <p>all rights reserved by &copy; Sanjana </p>
+        </div>
+    </div>
+    <!----calculator-footer design--->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -107,49 +103,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-        function Show() 
-        {
+        function Show() {
 
             var a = document.result.Number.value;
-        
-          if(a>100){
-            document.result.Grade.value = "Enter Numbers Range within (1-100)!"
-          }
-          else if (a >=80){
 
-            document.result.Grade.value = "A+"
-          }
-          else if(a>=70){
-            document.result.Grade.value = "A"
-          }
-          else if(a>=60){
-            document.result.Grade.value = "A-"
-          }
-          else if(a>=50){
-            document.result.Grade.value = "B"
-          }
+            if (a > 100) {
+                document.result.Grade.value = "Enter Numbers Range within (1-100)!"
+            } else if (a >= 80) {
 
-          else if(a>=40){
-            document.result.Grade.value = "C"
-          }
-          else if(a>=33){
-            document.result.Grade.value = "D"
-          }
-          else if(a<=32){
-            document.result.Grade.value = "F"
-          }
-          
+                document.result.Grade.value = "A+"
+            } else if (a >= 70) {
+                document.result.Grade.value = "A"
+            } else if (a >= 60) {
+                document.result.Grade.value = "A-"
+            } else if (a >= 50) {
+                document.result.Grade.value = "B"
+            } else if (a >= 40) {
+                document.result.Grade.value = "C"
+            } else if (a >= 33) {
+                document.result.Grade.value = "D"
+            } else if (a <= 32) {
+                document.result.Grade.value = "F"
+            } else {
+                document.result.Grade.value = "INPUT ERROR!"
+            }
 
+        }
 
-      }
-    
-function showImage(){
-        document.getElementById('loadingImage').style.visibility="visible";
-    }
-function refresh(){
+        function showImage() {
+            document.getElementById('loadingImage').style.visibility = "visible";
+        }
 
-}
-</script>
+        function refresh() {
+
+        }
+    </script>
 </body>
 
 </html>
